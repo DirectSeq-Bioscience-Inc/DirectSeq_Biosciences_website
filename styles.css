@@ -499,6 +499,20 @@ section {
   margin-right: auto;
 }
 
+.founder-heading {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.founder-message {
+  margin-bottom: 12rem;      /* let the next title control spacing */
+}
+
+.problem-title {
+  margin-top: 61px;      /* space between video and "The Problem" */
+}
+
+
 /* Button styling inside problem section */
 #problem .center-btn {
   text-align: center;
