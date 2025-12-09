@@ -499,6 +499,21 @@ section {
   margin-right: auto;
 }
 
+.founder-video-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 18px;      /* matches your video corner radius */
+}
+
+.founder-video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;        /* this makes the poster crop properly */
+  aspect-ratio: 16 / 9;     /* forces the video + poster to use clean video shape */
+}
+
 .founder-heading {
   margin-top: 2rem;
   margin-bottom: 2rem;
