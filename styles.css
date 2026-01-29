@@ -1533,13 +1533,17 @@ footer {
 
 .footer-social-container {
   margin-top: 25px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  text-align: left; /* not needed but prevents weird center spacing */
 }
 
 .follow-text {
   font-size: 1rem;
   color: #d9e2ec;
-  margin-bottom: 12px;
+  margin: 0;              /* ✅ remove bottom margin */
   letter-spacing: 0.5px;
 }
 
@@ -1563,11 +1567,75 @@ footer {
   transform: scale(1.15);
 }
 
+/* Contact lines (Contact us / Email us) */
+.footer-contact {
+  text-align: center;
+  color: #d9e2ec;
+  line-height: 1.6;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+}
+
+/* Newsletter */
+.footer-newsletter {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.newsletter-title {
+  font-size: 1rem;
+  color: #d9e2ec;
+  margin: 0 0 12px;
+  letter-spacing: 0.5px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  width: 280px;
+  max-width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  outline: none;
+}
+
+.newsletter-form input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.newsletter-form button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: var(--directseq-green);
+  color: #041b1f;
+  font-weight: 600;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.newsletter-form button:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
 .copyright {
   color: var(--grey);
   font-size: 0.9rem;
   margin-top: 1rem;
 }
+
 
 /* Animations */
 @keyframes fadeIn {
