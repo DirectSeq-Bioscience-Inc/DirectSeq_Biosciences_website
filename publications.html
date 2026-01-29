@@ -5,36 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Publications • DirectSeq</title>
   <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
 
-  <!-- Optional: reuse your site header/nav -->
+  <!-- INLINE CSS (matches Problem page exactly) -->
+<style>
+  /* Fixed header (always visible) */
+  .sub-hero{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
 
-  <main id="all-publications" class="about-section" style="padding-top:4rem;">
-    <div class="container">
-      <h1 class="section-title">All Publications</h1>
+    padding: 56px 0 28px;
+    text-align: center;
+
+    background: rgba(243, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(10, 33, 66, 0.08);
+  }
+
+  .brand-link{
+    display:inline-block;
+    opacity:.95;
+    text-decoration:none;
+  }
+
+  .brand-logo{
+    height:42px;
+    margin-bottom:10px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .sub-hero-title{
+    font-family:'Montserrat', sans-serif;
+    font-size:2.4rem;
+    font-weight:800;
+    margin:0 0 8px;
+    line-height:1.15;
+    color:#0a2142;
+  }
+
+  .sub-hero-sub{
+    margin:0;
+    font-family:'Roboto', Arial, sans-serif;
+    font-size:1rem;
+    line-height:1.4;
+    color:rgba(10,33,66,.85);
+  }
+
+  /* Push page content below the fixed header */
+  body{
+    padding-top: 165px; /* desktop header height */
+  }
+
+  @media (max-width:768px){
+    .sub-hero{ padding:44px 0 20px; }
+    .brand-logo{ height:40px; margin-bottom:8px; }
+    .sub-hero-title{ font-size:2.05rem; }
+    body{ padding-top: 145px; } /* mobile header height */
+  }
+</style>
+
+
+  <!-- FIXED HEADER -->
+<header class="sub-hero">
+  <div class="container">
+    <a class="brand-link" href="index.html">
+      <img class="brand-logo"
+           src="logos/Horizontal_Logo/PNG/-DirectSeq_LogoRGB_Final__Horizontal_FullColor.png"
+           alt="DirectSeq" />
+    </a>
+
+    <h1 class="sub-hero-title">Publications</h1>
+    <p class="sub-hero-sub">Peer-reviewed research and scientific outputs from DirectSeq.</p>
+  </div>
+</header>
+
+  <!-- PAGE CONTENT -->
+  <main class="content-wrap">
+    <section id="all-publications" class="about-section">
+      <div class="container">
 
       <div class="pub-glass">
         <div class="pub-list">
-
-          <!-- Paper item -->
-          <article class="pub-list-item">
-            <h3 class="pub-title">Purification of post-transcriptionally modified tRNAs for enhanced cell-free translation systems</h3>
-            <p class="pub-summary">
-              This study introduces a hybridization-based purification method 
-              that enables high-yield production of native and engineered tRNAs 
-              from E. coli, preserving their natural post-transcriptional modifications and 
-              translational activity. The method outperforms traditional in vitro transcription, 
-              providing the first complete modification profiles of key tRNAs and offering a scalable 
-              toolkit for translation and synthetic biology research.
-            </p>
-            <div class="pub-cta">
-              <a class="btn btn-primary" href="https://pubmed.ncbi.nlm.nih.gov/40661628/" target="_blank" rel="noopener">
-                View Paper
-              </a>
-            </div>
-          </article>
-
+          
            <!-- Paper item -->
           <article class="pub-list-item">
             <h3 class="pub-title">Mass Spectrometry-Based Direct Sequencing of tRNAs De Novo and Quantitative Mapping of Multiple RNA Modifications</h3>
@@ -196,4 +253,5 @@
   <!-- Optional: reuse your site footer -->
 </body>
 </html>
+
 
