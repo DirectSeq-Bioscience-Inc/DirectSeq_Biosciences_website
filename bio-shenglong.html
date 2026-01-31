@@ -196,32 +196,64 @@
       justify-content:center;
       margin:14px 0 36px;
     }
-    .btn{
-      display:inline-block;
-      padding:11px 22px;
-      border-radius:999px;
-      font-weight:700;
-      text-decoration:none;
-      letter-spacing:.3px;
-      transition:transform .2s, box-shadow .2s;
-      font-family:var(--font-heading);
-    }
-    .btn-primary{
-      color:#fff;
-      background:linear-gradient(90deg,var(--directseq-green),var(--directseq-teal));
-      box-shadow:0 10px 20px rgba(7,144,147,.25);
-    }
-    .btn-primary:hover{
-      transform:translateY(-2px);
-      box-shadow:0 14px 28px rgba(7,144,147,.33);
-    }
-    .btn-outline{
-      color:var(--directseq-teal);
-      border:1px solid rgba(7,144,147,.25);
-      background:rgba(7,144,147,.08);
-    }
-    .btn-outline:hover{ transform:translateY(-2px); }
+    .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
+  padding: 8px 18px;              /* ⬅ smaller padding */
+  border-radius: 999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;             /* ⬅ smaller text */
+  font-weight: 700;
+  letter-spacing: 0.08em;         /* clean uppercase spacing */
+  text-transform: uppercase;
+
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  min-width: auto;                /* ⬅ remove oversized width */
+}
+
+/* Outline style (VIEW BIO) */
+.btn-outline {
+  color: var(--directseq-blue, #0a2142);
+  background: transparent;
+  border: 2px solid var(--directseq-blue, #0a2142); /* thinner border */
+}
+
+.btn-outline:hover {
+  background: rgba(10, 33, 66, 0.06);
+  transform: translateY(-1px);
+}
+
+/* Optional: primary if you use it elsewhere */
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    var(--directseq-green, #28bfa2),
+    var(--directseq-teal, #079093)
+  );
+  border: none;
+  box-shadow: 0 6px 14px rgba(7, 144, 147, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(7, 144, 147, 0.32);
+}
+
+/* =========================
+   MOBILE TUNING
+   ========================= */
+@media (max-width: 768px) {
+  .btn {
+    padding: 7px 16px;
+    font-size: 0.8rem;
+  }
+}
     /* Mobile tweaks (keeps same density as main site) */
     @media (max-width:768px){
       .card{ padding:20px; }
@@ -230,6 +262,46 @@
       .bio-content{ font-size:1.02rem; line-height:1.8; }
       .actions{ justify-content:flex-start; }
     }
+
+    /* ===============================
+   TEAM – VIEW BIO BUTTON (FINAL)
+   =============================== */
+
+#team .bio-link {
+  padding: 8px 18px !important;
+  font-size: 0.85rem !important;
+  border-radius: 999px !important;
+  min-width: auto !important;
+
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: transparent !important;
+  color: #0a2142 !important;
+  border: 2px solid #0a2142 !important;
+
+  transition: all 0.25s ease !important;
+}
+
+#team .bio-link:hover {
+  background: rgba(10, 33, 66, 0.06) !important;
+  transform: translateY(-1px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #team .bio-link {
+    padding: 7px 16px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
   </style>
 </head>
 
@@ -324,6 +396,3 @@ of RNA therapeutics and power the human RNome and beyond.</p>
   </div>
 </body>
 </html>
-
-
-
