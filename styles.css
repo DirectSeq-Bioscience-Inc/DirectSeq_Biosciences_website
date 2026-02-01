@@ -435,6 +435,51 @@ section {
   max-width: 1000px;
 }
 
+
+/* About Us text – justified for readability */
+#about .about-text p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+}
+
+/* FORCE true justification for About Us */
+#about .about-text p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+
+  line-height: 1.8;
+  font-size: 1.05rem;
+
+  /* Improves justification appearance */
+  word-spacing: 0.05em;
+}
+
+#about .about-text {
+  max-width: 620px;
+}
+
+@media (max-width: 768px) {
+  #about .about-text p {
+    text-align: left;
+    hyphens: none;
+  }
+}
+
+#about .about-text p:first-child {
+  margin-top: 0;
+}
+
+#about .about-text p + p {
+  margin-top: 1.2em;
+}
+
+#about .about-text p { text-align: justify !important; hyphens: auto !important; }
+#about .about-content { grid-template-columns: 1.25fr 1fr !important; }
+
+
 #our-aim {
   background: rgba(243, 255, 255, 0.95);
 }
