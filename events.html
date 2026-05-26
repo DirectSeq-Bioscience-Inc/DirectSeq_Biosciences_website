@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications • DirectSeq</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- INLINE CSS (matches Problem page exactly) -->
+<style>
+  /* Fixed header (always visible) */
+  .sub-hero{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    padding: 56px 0 28px;
+    text-align: center;
+
+    background: rgba(243, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(10, 33, 66, 0.08);
+  }
+
+  .brand-link{
+    display:inline-block;
+    opacity:.95;
+    text-decoration:none;
+  }
+
+  .brand-logo{
+    height:42px;
+    margin-bottom:10px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .sub-hero-title{
+    font-family:'Montserrat', sans-serif;
+    font-size:2.4rem;
+    font-weight:800;
+    margin:0 0 8px;
+    line-height:1.15;
+    color:#0a2142;
+  }
+
+  .sub-hero-sub{
+    margin:0;
+    font-family:'Roboto', Arial, sans-serif;
+    font-size:1rem;
+    line-height:1.4;
+    color:rgba(10,33,66,.85);
+  }
+
+  /* Push page content below the fixed header */
+  body{
+    padding-top: 165px; /* desktop header height */
+  }
+
+  @media (max-width:768px){
+    .sub-hero{ padding:44px 0 20px; }
+    .brand-logo{ height:40px; margin-bottom:8px; }
+    .sub-hero-title{ font-size:2.05rem; }
+    body{ padding-top: 145px; } /* mobile header height */
+  }
+
+  /* Responsive YouTube embed — 16:9 */
+  .video-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 56.25%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 16px auto 20px;
+  }
+
+  .video-wrap iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+
+</style>
+
+
+  <!-- FIXED HEADER -->
+<header class="sub-hero">
+  <div class="container">
+    <a class="brand-link" href="index.html">
+      <img class="brand-logo"
+           src="logos/Horizontal_Logo/PNG/-DirectSeq_LogoRGB_Final__Horizontal_FullColor.png"
+           alt="DirectSeq" />
+    </a>
+
+    <h1 class="sub-hero-title">Events</h1>
+    <p class="sub-hero-sub">News, announcements, and highlights from DirectSeq Biosciences.</p>
+  </div>
+</header>
+
+  <!-- PAGE CONTENT -->
+  <main class="content-wrap">
+    <section id="all-publications" class="about-section">
+      <div class="container">
+
+      <div class="pub-glass">
+        <div class="pub-list">
+          
+           <!-- Paper item -->
+          <article class="pub-list-item">
+            <h3 class="pub-title">Introducing DirectSeq Biosciences - The World's First RNome Sequencing Platform</h3>
+            <p class="pub-summary">
+               We are excited to share our new YouTube video introducing DirectSeq Biosciences - 
+              the World's First RNome Sequencing Platform.
+            </p>
+
+             <!-- Embedded YouTube video -->
+            <div class="video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/xtYW8YjfvwY?si=xSc7Wf4oo5sItkD8"
+                title="Introducing DirectSeq Biosciences"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <div class="pub-cta">
+              <a class="btn btn-primary" href="https://youtu.be/xtYW8YjfvwY?si=xSc7Wf4oo5sItkD8" target="_blank" rel="noopener">
+                Watch on YouTube
+              </a>
+            </div>
+          </article>
+
+          <div class="cta-row">
+          <a class="btn btn-primary" href="index.html#problem">← Back to Overview</a>
+          <a class="btn btn-secondary" href="index.html#services">Explore Services</a>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Optional: reuse your site footer -->
+</body>
+</html>
